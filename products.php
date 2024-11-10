@@ -58,21 +58,33 @@ session_start();
                 ],
                 [
                     'id' => 2,
-                    'image' => 'images/eco_bottle.jpg',
+                    'image' => 'images/waterbottle.jpg',
                     'name' => 'Reusable Water Bottle',
                     'price' => 500
                 ],
                 [
                     'id' => 3,
-                    'image' => 'images/images/cottom bag.jpg',
+                    'image' => 'images/cotton.webp',
                     'name' => 'Organic Cotton Tote Bag',
                     'price' => 250
                 ],
                 [
                     'id' => 4,
-                    'image' => 'images/steel_straw.jpg',
+                    'image' => 'images/straw.jpeg',
                     'name' => 'Stainless Steel Straw Set',
                     'price' => 200
+                ],
+                [
+                    'id' => 5,
+                    'image' => 'image/tshirt.jpeg',
+                    'name' => 'organic clothes',
+                    'price' => 400	
+                ],
+                [
+                    'id' => 6,
+                    'image' => 'images/watch.webp',
+                    'name' => 'Bamboo Watch',
+                    'price' => 300
                 ]
             ];
 

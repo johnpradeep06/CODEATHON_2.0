@@ -28,7 +28,7 @@ session_start();
                     We sell Happiness :)
                 </h1>
                 <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
-                    Flat 40% OFF on premium brands
+                    Flat 40% OFF on eco friendly products 
                 </p>
                 <a href="products.php" style="
                     display: inline-block;
@@ -51,7 +51,7 @@ session_start();
     <!-- Category Title -->
     <div style="text-align: center; padding: 4rem 0 2rem;">
         <h2 style="font-size: 2rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem;">
-            Be Fashionable Men
+            Be Fashionable and Eco Friendly
         </h2>
         <div style="width: 60px; height: 4px; background-color: #fbbf24; margin: 0 auto;"></div>
     </div>
@@ -61,10 +61,10 @@ session_start();
         <div class="row">
             <?php
             $categories = [
-                ['name' => 'Watches', 'image' => 'images/watch.jpg', 'link' => 'products.php#watch'],
-                ['name' => 'Clothing', 'image' => 'images/clothing.jpg', 'link' => 'products.php#shirt'],
-                ['name' => 'Shoes', 'image' => 'images/shoes.jpg', 'link' => 'products.php#shoes'],
-                ['name' => 'Headphones', 'image' => 'images/headphones.jpg', 'link' => 'products.php#headphones']
+                ['name' => 'Watches', 'image' => 'images/watch.webp', 'link' => 'products.php#watch'],
+                ['name' => 'Clothing', 'image' => 'images/tshirt.jpeg', 'link' => 'products.php#shirt'],
+                ['name' => 'Shoes', 'image' => 'images/shoes.webp', 'link' => 'products.php#shoes'],
+                ['name' => 'Straw', 'image' => 'images/straw.jpeg', 'link' => 'products.php#straw']
             ];
 
             foreach($categories as $category): ?>
