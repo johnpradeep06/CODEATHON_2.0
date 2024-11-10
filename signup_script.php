@@ -35,10 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['role'] = $role; // Store the role in session
 
             // Redirect based on role
-            if ($role == 'customer') {
-                header("Location: index.php"); // Redirect to index page for customers
-            } else if ($role == 'seller') {
+            if ($role == 'seller') {
                 header("Location: seller_index.php"); // Redirect to seller index page for sellers
+            } else if ($role == 'customer') {
+                header("Location: index.php"); // Redirect to index page for customers
             }
             exit(); // Ensure no further code is executed after redirection
         } else {
