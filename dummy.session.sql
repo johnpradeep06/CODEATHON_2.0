@@ -67,6 +67,7 @@ CREATE TABLE `users` (
   `email_id` varchar(255) NOT NULL,
   `first_name` varchar(20) NOT NULL,
   `last_name` varchar(20) DEFAULT NULL,
+  `phone` int(10) NOT NULL,
   `registration_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
