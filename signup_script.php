@@ -5,7 +5,7 @@ include('./includes/common.php'); // Ensure this path is correct
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
     $email = $_POST['eMail']; // This corresponds to email_id
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $phone = $_POST['phone'];
@@ -30,8 +30,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Execute the statement
         if ($stmt->execute()) {
+            // Store user information in session
             $_SESSION['email'] = $email; // Store the email in session
-            header("Location: index.php"); // Redirect to index page
+            $_SESSION['role'] = $role; // Store the role in session
+
+            // Redirect based on role
+            if ($role == 'customer') {
+                header("Location: index.php"); // Redirect to index page for customers
+            } else if ($role == 'seller') {
+                header("Location: seller_index.php"); // Redirect to seller index page for sellers
+            }
+            exit(); // Ensure no further code is executed after redirection
         } else {
             $error = "Error: " . $stmt->error; // Capture any errors
             header("Location: signup.php?error=" . urlencode($error)); // Redirect with error
