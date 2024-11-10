@@ -40,7 +40,7 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `price`) VALUES
 (1, 'Guess 1875', 3000),
-(2, 'Guest Watch', 2500),
+
 (3, 'reusable water bottle', 500),
 (4, 'Nonos Watch', 1800),
 (5, 'Levis', 1800),

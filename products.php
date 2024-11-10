@@ -20,7 +20,7 @@ while($row = mysqli_fetch_assoc($result)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Planet Shopify | Online Shopping Site for Men</title>
+    <title>EcoShopper | Online Shopping Site for Men</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600,700' rel='stylesheet'>
@@ -44,7 +44,7 @@ while($row = mysqli_fetch_assoc($result)) {
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
             <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
-                Welcome to Planet Shopify!
+                Welcome to EcoShopper!
             </h1>
             <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">
                 We have wide range of products for you. No need to hunt around, we have all in one place
