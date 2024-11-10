@@ -238,7 +238,7 @@
   </a>
   <div style="display: flex; align-items: center; width: 100%; max-width: 1000px;">
     <div class="eco-image" style="flex: 1; text-align: center;">
-      <img src="eco_image.jpg" alt="Eco-Friendly Image" style="width: 400px;height : 300px; border-radius: 10px;">
+      <img src="/images/eco_image.jpg" alt="Eco-Friendly Image" style="width: 400px;height : 300px; border-radius: 10px;">
     </div>
     <div class="eco-text" style="flex: 2; padding-left: 20px;">
       <p>
