@@ -54,7 +54,7 @@ while ($row = mysqli_fetch_array($result)) {
                             </tbody>
                             <?php
 } else {
-    echo "<div> <img src='images/emptycart.png' class='image-fluid' height='150' width='150'></div><br/>";
+    echo "<div> <img src='images/cart.jpg' class='image-fluid' height='150' width='150'></div><br/>";
     echo "<div class='text-bold  h5'>Add items to the cart first!<div>";
 
 }

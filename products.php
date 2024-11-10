@@ -52,7 +52,7 @@ session_start();
             $products = [
                 [
                     'id' => 1,
-                    'image' => 'images/bamboo_brush.jpg',
+                    'image' => 'images/brush.webp',
                     'name' => 'Bamboo Toothbrush',
                     'price' => 150
                 ],
@@ -76,8 +76,8 @@ session_start();
                 ],
                 [
                     'id' => 5,
-                    'image' => 'image/tshirt.jpeg',
-                    'name' => 'organic clothes',
+                    'image' => 'images/tshirt.jpeg',
+                    'name' => 'organic tshirt',
                     'price' => 400	
                 ],
                 [
@@ -85,6 +85,12 @@ session_start();
                     'image' => 'images/watch.webp',
                     'name' => 'Bamboo Watch',
                     'price' => 300
+                ],
+                [
+                    'id' => 9,
+                    'image' => 'images/shoes.webp',
+                    'name' => 'eco tailored shoes',
+                    'price' => 8000
                 ]
             ];
 

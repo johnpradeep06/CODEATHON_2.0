@@ -12,10 +12,10 @@
                         <a href="products.php#watch" class="dropdown-item">Watches</a>
                         <a href="products.php#shirt" class="dropdown-item">T-Shirts</a>
                         <a href="products.php#shoes" class="dropdown-item">Shoes</a>
-                        <a href="products.php#headphones" class="dropdown-item">Headphones/Speakers</a>
+                        <a href="products.php#headphones" class="dropdown-item">Straws</a>
                     </div>
                 </li>
-                <li class="nav-item"><a href="index.php" class="nav-link">Offers</a></li>
+                
                 <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
                 <?php if (isset($_SESSION['email'])) { ?>
                     <li class="nav-item"><a href="cart.php" class="nav-link">Cart</a></li>
