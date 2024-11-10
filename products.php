@@ -1,5 +1,18 @@
 <?php
 session_start();
+require("includes/common.php");
+$query = "SELECT id, name, price, image_path FROM products ORDER BY id DESC";
+$result = mysqli_query($con, $query);
+$products = [];
+
+while($row = mysqli_fetch_assoc($result)) {
+    $products[] = [
+        'id' => $row['id'],
+        'image' => $row['image_path'],
+        'name' => $row['name'],
+        'price' => $row['price']
+    ];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,51 +62,6 @@ session_start();
         <!--products grid-->
         <div class="row" id="eco-products">
             <?php
-            $products = [
-                [
-                    'id' => 1,
-                    'image' => 'images/brush.webp',
-                    'name' => 'Bamboo Toothbrush',
-                    'price' => 150
-                ],
-                [
-                    'id' => 2,
-                    'image' => 'images/waterbottle.jpg',
-                    'name' => 'Reusable Water Bottle',
-                    'price' => 500
-                ],
-                [
-                    'id' => 3,
-                    'image' => 'images/cotton.webp',
-                    'name' => 'Organic Cotton Tote Bag',
-                    'price' => 250
-                ],
-                [
-                    'id' => 4,
-                    'image' => 'images/straw.jpeg',
-                    'name' => 'Stainless Steel Straw Set',
-                    'price' => 200
-                ],
-                [
-                    'id' => 5,
-                    'image' => 'images/tshirt.jpeg',
-                    'name' => 'organic tshirt',
-                    'price' => 400	
-                ],
-                [
-                    'id' => 6,
-                    'image' => 'images/watch.webp',
-                    'name' => 'Bamboo Watch',
-                    'price' => 300
-                ],
-                [
-                    'id' => 9,
-                    'image' => 'images/shoes.webp',
-                    'name' => 'eco tailored shoes',
-                    'price' => 8000
-                ]
-            ];
-
             foreach($products as $product): ?>
                 <div class="col-md-3 col-6 mb-4">
                     <div style="
