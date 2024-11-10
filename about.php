@@ -218,7 +218,7 @@
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
-    <div class="logo">Eco World</div>
+    <div class="logo">Eco Shopper</div>
   </nav>
 
   <!-- Hero Section -->
