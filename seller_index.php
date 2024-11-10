@@ -14,12 +14,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = mysqli_real_escape_string($con, $_POST['name']);
     $price = mysqli_real_escape_string($con, $_POST['price']);
     
-    $query = "INSERT INTO products (name, price) VALUES ('$name', '$price')";
+    // Handle image upload
+    $target_dir = "uploads/";
+    if (!file_exists($target_dir)) {
+        mkdir($target_dir, 0777, true);
+    }
     
-    if(mysqli_query($con, $query)) {
-        $success_msg = "Product added successfully!";
+    $image = $_FILES['image'];
+    $image_path = $target_dir . time() . '_' . basename($image['name']);
+    
+    if (move_uploaded_file($image['tmp_name'], $image_path)) {
+        // Insert product with image path
+        $query = "INSERT INTO products (name, price, image_path) VALUES (?, ?, ?)";
+        $stmt = $con->prepare($query);
+        $stmt->bind_param("sis", $name, $price, $image_path);
+        
+        if($stmt->execute()) {
+            $success_msg = "Product added successfully!";
+        } else {
+            $error_msg = "Error adding product: " . $stmt->error;
+        }
+        $stmt->close();
     } else {
-        $error_msg = "Error adding product: " . mysqli_error($con);
+        $error_msg = "Error uploading image.";
     }
 }
 ?>
@@ -144,7 +161,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                     <?php endif; ?>
 
-                    <form action="" method="POST">
+                    <form action="" method="POST" enctype="multipart/form-data">
                         <div style="margin-bottom: 1.5rem;">
                             <label for="name" style="
                                 display: block;
@@ -189,6 +206,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     transition: border-color 0.3s;"
                                    onmouseover="this.style.borderColor='#667eea'"
                                    onmouseout="this.style.borderColor='#e5e7eb'">
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="image" style="
+                                display: block;
+                                margin-bottom: 0.5rem;
+                                color: #4b5563;
+                                font-weight: 500;">
+                                Product Image
+                            </label>
+                            <input type="file" 
+                                   id="image" 
+                                   name="image" 
+                                   accept="image/*"
+                                   required 
+                                   style="
+                                    width: 100%;
+                                    padding: 0.75rem;
+                                    border: 1px solid #e5e7eb;
+                                    border-radius: 0.5rem;
+                                    font-size: 1rem;">
                         </div>
 
                         <button type="submit" style="
