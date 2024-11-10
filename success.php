@@ -9,6 +9,47 @@ mysqli_query($con, $query);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Add Bootstrap CSS if not already included -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f8fb;
+        }
+
+        #content {
+            padding: 50px 0;
+        }
+
+        .jumbotron {
+            background-color: #ffffff;
+            padding: 3rem 2rem;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .jumbotron h3 {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .jumbotron p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+        }
+
+        .jumbotron a {
+            color: #3498db;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .jumbotron a:hover {
+            color: #2980b9;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">

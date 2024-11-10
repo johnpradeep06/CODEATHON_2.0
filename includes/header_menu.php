@@ -16,7 +16,7 @@
                     </div>
                 </li>
                 
-                <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="about.php" class="nav-link">Learnings</a></li>
                 <?php if (isset($_SESSION['email'])) { ?>
                     <li class="nav-item"><a href="cart.php" class="nav-link">Cart</a></li>
                 <?php } ?>

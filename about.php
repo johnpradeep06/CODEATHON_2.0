@@ -218,14 +218,14 @@
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
-    <div class="logo">Eco World</div>
+    <div class="logo">Eco Shopper</div>
   </nav>
 
   <!-- Hero Section -->
   <header class="hero-section">
     <div class="hero-text">
       <h1>Make a Difference with <br>Eco-Friendly Products</h1>
-      <p>At EcoWorld, we're dedicated to creating a sustainable future. Join us in making conscious choices for a greener planet.</p>
+      <p>At EcoShopper, we're dedicated to creating a sustainable future. Join us in making conscious choices for a greener planet.</p>
     </div>
     <div class="hero-image">
       <img src="./images/1.jpg" alt="Eco-Friendly Products" style="width: 420px;height : 420px">
@@ -239,7 +239,7 @@
   </a>
   <div style="display: flex; align-items: center; width: 100%; max-width: 1000px;">
     <div class="eco-image" style="flex: 1; text-align: center;">
-      <img src="/images/eco_image.jpg" alt="Eco-Friendly Image" style="width: 400px;height : 300px; border-radius: 10px;">
+      <img src="./images/eco_image.jpg" alt="Eco-Friendly Image" style="width: 400px;height : 300px; border-radius: 10px;">
     </div>
     <div class="eco-text" style="flex: 2; padding-left: 20px;">
       <p>
@@ -261,19 +261,19 @@
     <h2 onclick="scrollToBlogs()">Our Blogs</h2>
     <div class="blogs">
       <div class="blog-post">
-        <img src="/images/2.jpg" alt="Sustainable Living 101">
+        <img src="./images/2.jpg" alt="Sustainable Living 101">
         <h3>Sustainable Living 101</h3>
         <p>Learn simple ways to incorporate eco-friendly habits.</p>
         <button class="readMoreBtn" onclick="showContent('sustainableLiving')">Read More</button>
       </div>
       <div class="blog-post">
-        <img src="/images/3.png" alt="The Impact of Plastic Waste">
+        <img src="./images/3.png" alt="The Impact of Plastic Waste">
         <h3>The Impact of Plastic Waste</h3>
         <p>Discover how reducing plastic use helps the environment.</p>
         <button class="readMoreBtn" onclick="showContent('plasticWaste')">Read More</button>
       </div>
       <div class="blog-post">
-        <img src="/images/4.jpg" alt="Green Energy Solutions">
+        <img src="./images/4.jpg" alt="Green Energy Solutions">
         <h3>Green Energy Solutions</h3>
         <p>Explore different green energy solutions and how they can.</p>
         <button class="readMoreBtn" onclick="showContent('greenEnergy')">Read More</button>
