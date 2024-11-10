@@ -13,7 +13,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare an SQL statement
     if ($con) {
-        // Update the column names to match your table schema
+        // Check if email already exists
+        $check_email = $con->prepare("SELECT email_id FROM users WHERE email_id = ?");
+        $check_email->bind_param("s", $email);
+        $check_email->execute();
+        $result = $check_email->get_result();
+        
+        if ($result->num_rows > 0) {
+            header("Location: signup.php?error=" . urlencode("Email already exists"));
+            exit();
+        }
+        
+        // If email doesn't exist, proceed with insertion
         $stmt = $con->prepare("INSERT INTO users (email_id, password, first_name, last_name, phone, role) VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssss", $email, $password, $firstName, $lastName, $phone, $role);
 
