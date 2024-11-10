@@ -49,9 +49,22 @@
             </div>
             <div class="modal-body">
                 <form action="signup_script.php" method="post">
+                    <div class="form-group text-center">
+                        <label>Select Your Role:</label>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-primary">
+                                <input type="radio" name="role" id="customer" value="customer" checked>
+                                <i class="fa fa-user" aria-hidden="true"></i> Customer
+                            </label>
+                            <label class="btn btn-outline-primary">
+                                <input type="radio" name="role" id="seller" value="seller">
+                                <i class="fa fa-store" aria-hidden="true"></i> Seller
+                            </label>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="email">Email address:</label>
-                        <input type="email" class="form-control" name="eMail" placeholder="Enter email" required>
+                        <input type="email" class=" form-control" name="eMail" placeholder="Enter email" required>
                         <?php if (isset($_GET['error'])) { echo "<span class='text-danger'>".$_GET['error']."</span>"; } ?>
                     </div>
                     <div class="form-group">
@@ -65,8 +78,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="validation2">Last Name</label>
-                            <input type="text ```php
-" class="form-control" id="validation2" name="lastName" placeholder="Last Name">
+                            <input type="text" class="form-control" id="validation2" name="lastName" placeholder="Last Name" required>
                         </div>
                     </div>
                     <div class="form-group">

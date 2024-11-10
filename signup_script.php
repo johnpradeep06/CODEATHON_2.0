@@ -1,39 +1,38 @@
 <?php
-require "includes/common.php";
 session_start();
+include('./includescommon.php'); // Ensure this path is correct
 
-$email = $_POST['eMail'];
-$email = mysqli_real_escape_string($con, $email);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form data
+    $email = $_POST['eMail']; // This corresponds to email_id
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $phone = $_POST['phone'];
+    $role = $_POST['role']; // Get the selected role
 
-$pass = $_POST['password'];
-$pass = mysqli_real_escape_string($con, $pass);
-$pass = md5($pass);
+    // Prepare an SQL statement
+    if ($con) {
+        // Update the column names to match your table schema
+        $stmt = $con->prepare("INSERT INTO users (email_id, password, first_name, last_name, phone, role) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssss", $email, $password, $firstName, $lastName, $phone, $role);
 
-$first = $_POST['firstName'];
-$first = mysqli_real_escape_string($con, $first);
+        // Execute the statement
+        if ($stmt->execute()) {
+            $_SESSION['email'] = $email; // Store the email in session
+            header("Location: index.php"); // Redirect to index page
+        } else {
+            $error = "Error: " . $stmt->error; // Capture any errors
+            header("Location: signup.php?error=" . urlencode($error)); // Redirect with error
+        }
 
-$last = $_POST['lastName'];
-$last = mysqli_real_escape_string($con, $last);
+        // Close the statement
+        $stmt->close();
+    } else {
+        die("Database connection failed.");
+    }
 
-// Get phone number from POST request
-$phone = $_POST['phone'];
-$phone = mysqli_real_escape_string($con, $phone);
-
-$query = "SELECT * from users where email_id='$email'";
-$result = mysqli_query($con, $query);
-$num = mysqli_num_rows($result);
-if ($num != 0) {
-    $m = "Email Already Exists";
-    header('location: index.php?error=' . $m);
-} else {
-    // Include phone in the insert query
-    $quer = "INSERT INTO users(email_id, first_name, last_name, password, phone) VALUES('$email', '$first', '$last', '$pass', '$phone')";
-    mysqli_query($con, $quer);
-
-    echo "New record has id: " . mysqli_insert_id($con);
-    $user_id = mysqli_insert_id($con);
-    $_SESSION['email'] = $email;
-    $_SESSION ['user_id'] = $user_id;
-    header('location:products.php');
+    // Close the connection
+    $con->close();
 }
 ?>
