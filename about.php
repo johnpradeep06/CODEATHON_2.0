@@ -227,7 +227,7 @@
       <p>At EcoWorld, we're dedicated to creating a sustainable future. Join us in making conscious choices for a greener planet.</p>
     </div>
     <div class="hero-image">
-      <img src="1.jpg" alt="Eco-Friendly Products" style="width: 420px;height : 420px">
+      <img src="./images/1.jpg" alt="Eco-Friendly Products" style="width: 420px;height : 420px">
     </div>
   </header>
 
@@ -260,19 +260,19 @@
     <h2 onclick="scrollToBlogs()">Our Blogs</h2>
     <div class="blogs">
       <div class="blog-post">
-        <img src="2.jpg" alt="Sustainable Living 101">
+        <img src="/images/2.jpg" alt="Sustainable Living 101">
         <h3>Sustainable Living 101</h3>
         <p>Learn simple ways to incorporate eco-friendly habits.</p>
         <button class="readMoreBtn" onclick="showContent('sustainableLiving')">Read More</button>
       </div>
       <div class="blog-post">
-        <img src="3.png" alt="The Impact of Plastic Waste">
+        <img src="/images/3.png" alt="The Impact of Plastic Waste">
         <h3>The Impact of Plastic Waste</h3>
         <p>Discover how reducing plastic use helps the environment.</p>
         <button class="readMoreBtn" onclick="showContent('plasticWaste')">Read More</button>
       </div>
       <div class="blog-post">
-        <img src="4.jpg" alt="Green Energy Solutions">
+        <img src="/images/4.jpg" alt="Green Energy Solutions">
         <h3>Green Energy Solutions</h3>
         <p>Explore different green energy solutions and how they can.</p>
         <button class="readMoreBtn" onclick="showContent('greenEnergy')">Read More</button>
