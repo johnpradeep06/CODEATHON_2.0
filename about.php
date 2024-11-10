@@ -29,15 +29,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
+      height: 60px;
       padding: 20px;
       background: rgba(0, 0, 0, 0.8);
     }
 
     .navbar .logo {
-      font-size: 1.5em;
+      font-size: 30px;
       font-weight: bold;
       color: lightgreen;
+      margin: 25px;
     }
 
     /* Hero Section */
@@ -217,7 +218,7 @@
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
-    <div class="logo">EcoWorld</div>
+    <div class="logo">Eco World</div>
   </nav>
 
   <!-- Hero Section -->
