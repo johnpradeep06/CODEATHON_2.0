@@ -1,2 +1,2 @@
 # CODEATHON_2.0
-We bussing bruda, we getting a W, no cap!! [rizzing]
+Creating a website for a internal class Hackathon based on the theme: "Web Solutions for Sustainable Cities and Communities"
